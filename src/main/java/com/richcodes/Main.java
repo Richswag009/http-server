@@ -47,14 +47,12 @@ public class Main {
 
         String requestLine  = bufferedReader.readLine();
          HttpRequest request = parseRequestLine(requestLine);
-
-         System.out.println(request.method());
-         System.out.println(request.path());
-         System.out.println(request.version());
+         System.out.println("Method: " + request.method());
+         System.out.println("Path: " + request.path());
+         System.out.println("Version: " + request.version());
 
         while((line = bufferedReader.readLine()) != null) {
             if (line.isEmpty()) break;
-            System.out.println("received line: " + line);
         }
 
         String body = "{ \"message\": \"Hello world o\" }";

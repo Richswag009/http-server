@@ -31,6 +31,7 @@ public record HttpResponse(
                     .append(header.getValue())
                     .append("\r\n");
         }
+
         builder.append("\r\n");
 
         if (body != null) {
